@@ -1,0 +1,64 @@
+.switch {
+    background-color: var(--background-color-secondary);
+    border-radius: 20px;
+    width: inherit;
+    min-width: 80px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    font-size: inherit;
+    user-select: none;
+    display: block;
+}
+
+.switch_input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch_slider {
+    background-color: var(--background-color-third);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 24%;
+    transition: transform, left 0.3s;
+}
+
+.switch_first,
+.switch_second {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch_first {
+    transform: translate(0, -50%);
+    left: 8px;
+    color: var(--text-color-third);
+}
+
+.switch_second {
+    transform: translate(-50%, -50%);
+    left: 76%;
+    color: var(--text-color);
+}
+
+.switch.checked .switch_slider {
+    transform: translate(-50%, -50%);
+    left: 76%;
+}
+
+.switch.checked .switch_first {
+    color: var(--text-color);
+}
+
+.switch.checked .switch_second {
+    color: var(--text-color-third);
+}

@@ -1,0 +1,123 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(219, 219, 219, 0.8);
+    cursor: pointer;
+}
+
+.precipitation {
+    position: absolute;
+    width: 95%;
+    max-width: 1180px;
+    height: 330px;
+    background-color: var(--background-color);
+    border: 3px solid var(--background-color-third);
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color: var(--text-color);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.precipitation_header {
+    font-size: 18px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 140px auto;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-left: 10px;
+}
+
+.precipitation_box {
+    position: relative;
+    display: flex;
+    height: 250px;
+    overflow-x: auto;
+    padding-left: 40px;
+}
+
+.close {
+    border-radius: 50%;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: end;
+    margin-left: calc(50% - 180px/2);
+}
+
+.line_one,
+.line_two,
+.line_three {
+    position: absolute;
+    left: 40px;
+    width: 1100px;
+    height: 1px;
+    border: 1px dashed var(--text-color);
+}
+
+.line_one::after,
+.line_two::after,
+.line_three::after {
+    top: 50%;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    color: var(--text-color);
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.line_one {
+    bottom: 26px;
+}
+
+.line_one::after {
+    content: "0%";
+}
+
+.line_two {
+    bottom: 124px;
+}
+
+.line_two::after {
+    content: "50%";
+}
+
+.line_three {
+    bottom: 224px;
+}
+
+.line_three::after {
+    content: "100%";
+}
+
+.timeline {
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    gap: 10px;
+}
+
+.hour {
+    position: relative;
+}
+
+.hour span {
+    width: 10px;
+    background-color: var(--background-color-third);
+    position: absolute;
+    bottom: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+

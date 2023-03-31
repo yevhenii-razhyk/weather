@@ -1,0 +1,19 @@
+.weather {
+    width: 100%;
+    position: relative;
+}
+
+.weather_top {
+    display: flex;
+    gap: 20px;
+    height: 220px;
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+@media (max-width: 500px) {
+    .weather_top {
+        flex-direction: column;
+        height: auto;
+    }
+}

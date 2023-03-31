@@ -1,0 +1,53 @@
+.box {
+    color: var(--text-color);
+}
+
+.hourly_top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.show_precip {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 1.5rem;
+    padding: 10px 0;
+}
+
+.hourly {
+    overflow: auto;
+    user-select: none;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+}
+
+.table {
+    border-collapse: collapse;
+    margin: 0 -5px;
+}
+
+.table tbody td:first-child {
+    display: flex;
+    width: 100px;
+}
+
+.table tbody tr td {
+    padding: 5px 10px;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: var(--background-color-secondary);
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: var(--background-color);
+}
+
+.table tbody tr td:not(:first-child) {
+    text-align: center;
+}
