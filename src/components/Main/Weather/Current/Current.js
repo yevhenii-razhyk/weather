@@ -23,7 +23,7 @@ const Current = ({ current, astro }) => {
                     </span>
                     <span>
                         <span className={styles.current_label}>Pressure: </span>
-                        <span className={styles.current_value}>{Math.round(current.pressure_in * 25.4)} mm</span>
+                        <span className={styles.current_value}>{Math.round(current.pressure_in * 25.4)}</span>
                     </span>
                     <span>
                         <span className={styles.current_label}>Humidity: </span>
