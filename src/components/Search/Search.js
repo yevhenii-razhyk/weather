@@ -24,7 +24,7 @@ const Search = () => {
     const handleChange = e => {
         setValue(e.target.value)
         if (e.target.value) {
-            fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${e.target.value}&limit=5&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`)
+            fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${e.target.value}&limit=5&appid=15329a0fa39b7a56125985c2de13197b`)
                 .then(res => res.json())
                 .then(data => setSearchedCity(data))
         } else {
