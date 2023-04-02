@@ -7,7 +7,7 @@ const initialState = {
 }
 
 const fetchWeather = createAsyncThunk('weather/fetchWeather', (city) => {
-    return fetch(`https://api.weatherapi.com/v1/forecast.json?key=60c50d68c9174941903141841231903   &q=${city.lat},${city.lon}&days=7&aqi=no&alerts=no`)
+    return fetch(`https://api.weatherapi.com/v1/forecast.json?key=60c50d68c9174941903141841231903&q=${city.lat},${city.lon}&days=7&aqi=no&alerts=no`)
     .then(response => response.json())
 }) 
 
@@ -17,6 +17,8 @@ const weatherSlice = createSlice({
     extraReducers: builder => {
         builder.addCase(fetchWeather.pending, state => {
             state.loading = true
+            state.weather = {}
+            state.error = ""
         })
         builder.addCase(fetchWeather.fulfilled, (state, action) => {
             state.loading = false

@@ -87,7 +87,7 @@ const Hourly = ({ hour, setIsVisible }) => {
                             }
                         </tr>
                         <tr>
-                            <td>Cloud</td>
+                            <td>Cloud %</td>
                             {
                                 hour.map(hour => (
                                     <td key={Math.random()}>{hour.cloud}</td>
